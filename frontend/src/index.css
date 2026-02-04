@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.input {
+  @apply w-full border border-slate-200 p-3 rounded-lg mt-3 bg-white/80 backdrop-blur-sm focus:border-blue-300 focus:ring-2 focus:ring-blue-100 transition-all duration-200 text-slate-700;
+}
+
+.btn {
+  @apply w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg mt-4 hover:from-blue-600 hover:to-blue-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
+}
+
+.link {
+  @apply text-blue-600 cursor-pointer hover:text-blue-700 transition-colors duration-200 font-medium;
+}
+
+/* Auth swipe animation */
+.auth-container {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+}
+
+.auth-slider {
+  display: flex;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.auth-panel {
+  width: 50%;
+  padding: 1.5rem;
+}
+
+input:disabled {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
